@@ -38,7 +38,7 @@ void main() {
         } else if (answer.equals("no")) {
 
             System.out.println("bye");
-            continue;
+            return;
         } else {
             System.out.println("what?");
             IO.readln("");
@@ -49,6 +49,7 @@ void main() {
             IO.println(busplaces[e]);
 
         }
+        
 
         // for(String places: busplaces){
         // IO.println(places);
