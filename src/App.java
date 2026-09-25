@@ -30,7 +30,7 @@ void main() {
 
                 --places_left;
                 // IO.println(busplaces[i]);
-                IO.println( "would you like to see the earninings so far (write:  1) or  the current amount of passengers (write: 2)");
+                IO.println( "would you like to see the earninings so far (write:  1) or  the current amount of passengers (write: 2) or the places left if you cannot do math(write: 3)");
                 int choice = 0;
                 try {
                     choice = Integer.parseInt(IO.readln(""));
@@ -40,10 +40,14 @@ void main() {
                     continue;
 
                 }
+                
                 if (choice == 1) {
                     IO.println("total earnings so far =  " + (20 - places_left) * price + " $ ");
                 } else if (choice == 2) {
                     IO.println("bus has " + (20 - places_left) + " passanger(s) ");
+                }
+                else if(choice == 3){
+                    IO.println(places_left);
                 }
 
             }
