@@ -5,7 +5,8 @@ void main() {
 
         String answer = IO.readln("");
 
-        String busplaces[] = { "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
+        String busplace_numbers[] = { "1.", "2.", "3.", "4.", "5.", "6.", "7.", "8.", "9.", "10.", "11.", "12.","13.", "14.", "15.", "16.", "17.", "18.", "19.", "20." };
+        String busplaces[] = { " ", " ", " ", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" };
         int places_left = 20;
         float price = 29.990f;
         int date_of_birth = 0;
@@ -29,10 +30,27 @@ void main() {
 
                 --places_left;
                 // IO.println(busplaces[i]);
+                IO.println(
+                        "would you like to see the earninings so far (write:  1) or passengers left (write: 2) or the places remaining");
+                int choice = 0;
+                try {
+                    choice = Integer.parseInt(IO.readln(""));
 
-                IO.println("total earnings so far =  " + (20 - places_left) * price + " $ ");
-                IO.println("bus has " + (20 - places_left) + " passanger(s) ");
+                } catch (NumberFormatException e) {
+                    IO.println("i guess that is a no");
+                    continue;
 
+                }
+                if (choice == 1) {
+                    IO.println("total earnings so far =  " + (20 - places_left) * price + " $ ");
+                } else if (choice == 2) {
+                    IO.println("bus has " + (20 - places_left) + " passanger(s) ");
+                }
+
+            }
+
+            for (int e = 0; e < busplaces.length; e++) {
+             IO.print(busplace_numbers[e]); IO.println(busplaces[e]);  
             }
 
         } else if (answer.equals("no")) {
@@ -44,12 +62,6 @@ void main() {
             IO.readln("");
 
         }
-
-        for (int e = 0; e < busplaces.length; e++) {
-            IO.println(busplaces[e]);
-
-        }
-        
 
         // for(String places: busplaces){
         // IO.println(places);
