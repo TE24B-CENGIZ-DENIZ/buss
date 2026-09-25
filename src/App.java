@@ -29,7 +29,6 @@ void main() {
                 }
 
                 --places_left;
-                // IO.println(busplaces[i]);
                 IO.println( "would you like to see the earninings so far (write:  1) or  the current amount of passengers (write: 2) or the places left if you cannot do math(write: 3)");
                 int choice = 0;
                 try {
