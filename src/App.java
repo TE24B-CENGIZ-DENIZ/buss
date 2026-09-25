@@ -13,7 +13,7 @@ void main() {
         if (answer.equals("yes")) {
 
             for (int i = 0; i < busplaces.length; i++) {
-                // kolla att index inte är bokat
+                
 
                 if (places_left > 0) {
                     IO.println("you can now book a place");
@@ -21,7 +21,7 @@ void main() {
 
                 try {
                     date_of_birth = Integer.parseInt(IO.readln("your date of birth?: "));
-                    busplaces[i] = " " + date_of_birth; // lägg in bokning i array bussplaces
+                    busplaces[i] = " " + date_of_birth; 
 
                 } catch (NumberFormatException e) {
                     IO.println("where you even born ? try on the next bus im bored");
@@ -64,12 +64,6 @@ void main() {
             IO.readln("");
 
         }
-
-        // for(String places: busplaces){
-        // IO.println(places);
-
-        // }
-        // : means for each item
 
         if (places_left == 0) {
             IO.println("all the places are booked");
