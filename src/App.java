@@ -30,8 +30,7 @@ void main() {
 
                 --places_left;
                 // IO.println(busplaces[i]);
-                IO.println(
-                        "would you like to see the earninings so far (write:  1) or passengers left (write: 2) or the places remaining");
+                IO.println( "would you like to see the earninings so far (write:  1) or passengers left (write: 2) or the places remaining");
                 int choice = 0;
                 try {
                     choice = Integer.parseInt(IO.readln(""));
